@@ -24,7 +24,7 @@ def load_view():
     col2.write("\n")
     # Add the sign-in button to the container
     #replace the below path with your path as mentioned in installation guide
-    with open('cta\pages_rec\button.css') as f:
+    with open('cta/pages_rec/button.css') as f:
         col2.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
         col1,col2,col3,col4,col5=col2.columns(5)
         x = col1.button("Sign in with Adobe")
