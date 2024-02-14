@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <!--<head>Streamlit home</head>-->
+    <meta name="streamlit-payload" content='{{ context }}'>
+  <script>
+    // Redirect to the new URL with the payload
+    function redirectWithPayload() {
+      var payloadMeta = document.querySelector('meta[name="streamlit-payload"]');
+      if (payloadMeta) {
+        var payloadContent = payloadMeta.getAttribute('content');
+        console.log(payloadContent)
+        const link = document.createElement("a");
+        const file = new Blob([payloadContent], { type: 'text/plain' });
+        link.href = URL.createObjectURL(file);
+        link.download = "sample.txt";
+        link.click();
+        URL.revokeObjectURL(link.href);
+        var newURL = "http://localhost:8501/?nav=Search";
+        try {
+          window.location.href = newURL;
+        }
+        catch(err) {
+          console.log(err);
+        }
+        
+      }
+    }
+    /*
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://localhost:8501/Search", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+    
+
+    var payloadMeta = document.querySelector('meta[name="streamlit-payload"]');
+    var payloadContent = payloadMeta.getAttribute('content');
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        const response = JSON.parse(xhr.responseText);
+        console.log("Response:", response);
+      }
+    };
+
+    xhr.onerror = function() {
+      console.error("Error:", xhr.statusText);
+    };
+
+    xhr.send(payloadContent);
+    */
+    redirectWithPayload();
+  </script>
+    <body>
+        
+        <!--<meta http-equiv="refresh" content = "1; url = {{url}}" />-->
+        <!--<meta http-equiv="refresh" name="streamlit-payload" content="{{ context }}">-->
+        <p>{{ context }}</p>
+
+    </body>
+</html>

@@ -1,0 +1,9 @@
+.stButton>button {
+    color: #a78ce7;
+    border-radius: 0%;
+    height: 3em;
+    width: 20em;
+    font-size: 100%;
+}
+
+/*this file adds css to the sign in with adobe button that gets displayed on the login page*/

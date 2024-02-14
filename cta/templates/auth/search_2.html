@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--<title>Send Data to Streamlit</title>-->
+    <meta http-equiv="refresh" name="streamlit-payload" content='0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001; url = http://localhost:8501/?nav=Search&token={{token}}'>
+</head>
+<body>
+    <form id="data-form">
+        <textarea id="data-textarea" rows="10" cols="50">{{ context }}</textarea>
+        <button type="button" onclick="sendData()"></button>
+    </form>
+    <!--
+    <script>
+        function sendData() {
+            var data = document.getElementById("data-textarea").value;
+
+            // Make an AJAX POST request to the Streamlit app
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "http://localhost:8501/?nav=Search", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.send("data=" + encodeURIComponent(data));
+        }
+        var data = document.getElementById("data-textarea").value;
+        print(data)
+        // Make an AJAX POST request to the Streamlit app
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://localhost:8501/?nav=Search", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.setRequestHeader("Access-Control-Allow-Origin","*");
+        xhr.send("data=" + encodeURIComponent(data));
+    </script>-->
+</body>
+</html>

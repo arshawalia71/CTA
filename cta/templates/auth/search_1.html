@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--<title>Search</title>-->
+    <!-- Include Ag-Grid CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ag-grid/27.1.0/styles/ag-grid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ag-grid/27.1.0/styles/ag-theme-alpine.min.css">
+</head>
+<body>
+    <h1>Search</h1>
+    <div id="myGrid" style="height: 500px; width: 100%;" class="ag-theme-alpine"></div>
+
+    <!-- Include Ag-Grid JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ag-grid/27.1.0/ag-grid-community.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var gridOptions = {
+                columnDefs: [
+                    { headerName: "Make", field: "make" },
+                    { headerName: "Model", field: "model" },
+                    { headerName: "Year", field: "year" }
+                ],
+                rowData: [
+                    { make: "Toyota", model: "Camry", year: 2022 },
+                    { make: "Honda", model: "Civic", year: 2023 },
+                    { make: "Ford", model: "Focus", year: 2021 }
+                ]
+            };
+
+            var gridDiv = document.querySelector('#myGrid');
+            new agGrid.Grid(gridDiv, gridOptions);
+        });
+    </script>
+</body>
+</html>

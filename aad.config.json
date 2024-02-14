@@ -1,0 +1,30 @@
+{
+    "type": {
+        "client_type": "CONFIDENTIAL",
+        "authority_type": "SINGLE_TENANT",
+        "framework": "DJANGO"
+    },
+    "client": {
+        "client_id": "6eabed63-3e19-4492-b153-2a9abcda4091",
+        "client_credential": "9X38Q~_Zlwqs24C6Ppw2QIA3z5EugUiBXVmx8cOn",
+        "authority": "https://login.microsoftonline.com/fa7b1b5a-7b34-4387-94ae-d2c178decee1"
+    },
+    "auth_request": {
+        "redirect_uri": null,
+        "scopes": ["https://org4a3a1dd4.api.crm.dynamics.com/.default"],
+        "response_type": "code"
+    },
+    "flask": null,
+    "django": {
+        "id_web_configs": "MS_ID_WEB_CONFIGS",
+        "auth_endpoints": {
+            "prefix": "auth",
+            "sign_in": "sign_in",
+            "edit_profile": "edit_profile",
+            "redirect": "redirect",
+            "sign_out": "sign_out",
+            "entities": "entities",
+            "post_sign_out": "post_sign_out"
+        }
+    }
+}

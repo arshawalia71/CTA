@@ -1,0 +1,8 @@
+django
+requests
+streamlit
+streamlit-aggrid
+pyDataverse
+ms-dataverse
+django-cors-headers
+streamlit-extras
