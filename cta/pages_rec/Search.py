@@ -26,7 +26,7 @@ import utils as utl
 def UpdateProject(dataframe, token): #takes us to the update page while sending the selected record as payload so that it can be displayed
     dataframe = pd.DataFrame(dataframe.selected_rows) 
     dataframe = dataframe.to_dict('records')
-    nav_script = """<meta http-equiv="refresh" content="0; url='%s'">""" % ('http://localhost:8501/?nav=update&payload='+str(dataframe)+'&token='+token)
+    nav_script = """<meta http-equiv="refresh" content="0; url='%s'">""" % ('https://bgdaxjwbynxkobvuwmmt67.streamlit.app/?nav=update&payload='+str(dataframe)+'&token='+token)
     st.write(nav_script, unsafe_allow_html=True)
 def viewHistory(dataframe): #sends the selected record to the backend to fetch its history
     dataframe = pd.DataFrame(dataframe.selected_rows)
@@ -34,7 +34,7 @@ def viewHistory(dataframe): #sends the selected record to the backend to fetch i
     dr_no = dataframe["DR_Number"]
     nav_script = """
                     <meta http-equiv="refresh" content="0; url='%s'">
-                """ % ('http://localhost:8000/auth/audit?payload='+str(dr_no)) #send the dr_no to query in the backend for history of that particular record
+                """ % ('https://bgdaxjwbynxkobvuwmmt67.streamlit.app/auth/audit?payload='+str(dr_no)) #send the dr_no to query in the backend for history of that particular record
     st.write(nav_script, unsafe_allow_html=True)
 
 def get_data(token):
@@ -59,7 +59,7 @@ def get_data(token):
 
     if "Search" not in st.session_state:
 
-        resp = requests.get("http://localhost:8000/get_tables", params = {"token":token}, headers=headers)
+        resp = requests.get("https://bgdaxjwbynxkobvuwmmt67.streamlit.app/get_tables", params = {"token":token}, headers=headers)
 
         if resp.status_code == 200:
 
@@ -196,7 +196,7 @@ def search():
         #quote function just converts it intoproper url format
         nav_script = """
             <meta http-equiv="refresh" content="0; url='%s'">
-        """ % ('http://localhost:8000/auth/journey?data='+quote(str(payload))+'&dr_number='+quote(str(dr_number))+'&token='+quote(str(token)))
+        """ % ('https://bgdaxjwbynxkobvuwmmt67.streamlit.app/auth/journey?data='+quote(str(payload))+'&dr_number='+quote(str(dr_number))+'&token='+quote(str(token)))
 
         st.write(nav_script, unsafe_allow_html=True) #sends the record along with its DR number to the journey.html file that sends it to backend
     
@@ -216,7 +216,7 @@ def search():
         #quote function just converts it intoproper url format
         nav_script = """
             <meta http-equiv="refresh" content="0; url='%s'">
-        """ % ('http://localhost:8000/get_usecases?data='+quote(str(payload))+'&dr_number='+quote(str(dr_number))+'&token='+quote(str(token)))
+        """ % ('https://bgdaxjwbynxkobvuwmmt67.streamlit.app/get_usecases?data='+quote(str(payload))+'&dr_number='+quote(str(dr_number))+'&token='+quote(str(token)))
 
         st.write(nav_script, unsafe_allow_html=True) #sends the record along with its DR number to the journey.html file that sends it to backend
     

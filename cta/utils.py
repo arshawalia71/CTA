@@ -69,7 +69,7 @@ def navbar_component():
 
         if value == "Report":
             navbar_items += (
-                f'<a title:"report" style="font-family: Sans Serif; float: left; display: block; color: #0w2450 !important; text-align: center; padding: 10px 0px; text-decoration: none !important; border-bottom: 2px solid transparent; font-size: 24px;" href="http://localhost:8000/get_token" target="_self">{key}</a>'
+                f'<a title:"report" style="font-family: Sans Serif; float: left; display: block; color: #0w2450 !important; text-align: center; padding: 10px 0px; text-decoration: none !important; border-bottom: 2px solid transparent; font-size: 24px;" href="https://bgdaxjwbynxkobvuwmmt67.streamlit.app/get_token" target="_self">{key}</a>'
             )
 
         #styling for add icon 
@@ -81,34 +81,34 @@ def navbar_component():
                 f'<div class="dropdown" style="position: relative; display: inline-block;">'
                 f'    <a style="font-family: Sans Serif; float: left; display: block; color: #f2f2f2 !important; text-align: center; padding: 10px 40px; text-decoration: none !important; border-bottom: 2px solid transparent; font-size: 24px; cursor: pointer;" target="_self">{key}</a>'
                 f'    <div class="dropdown-content" >'
-                f'        <a href="http://localhost:8000/get_dropdowns" ">Customer Project</a>'
-                f'        <a href="http://localhost:8000/get_usecases" >Customer Usecase</a>'
+                f'        <a href="https://bgdaxjwbynxkobvuwmmt67.streamlit.app/get_dropdowns" ">Customer Project</a>'
+                f'        <a href="https://bgdaxjwbynxkobvuwmmt67.streamlit.app/get_usecases" >Customer Usecase</a>'
                     
                 f'    </div>'
                 f'</div>'
             )
         elif value == "Search":
             navbar_items += (
-                f'<a style="font-family: Sans Serif; float: left; display: block; color: #0w2450 !important; text-align: center; padding: 10px 40px; text-decoration: none !important; border-bottom: 2px solid transparent; font-size: 24px;" href="http://localhost:8000/get_token" target="_self">{key}</a>'
+                f'<a style="font-family: Sans Serif; float: left; display: block; color: #0w2450 !important; text-align: center; padding: 10px 40px; text-decoration: none !important; border-bottom: 2px solid transparent; font-size: 24px;" href="https://bgdaxjwbynxkobvuwmmt67.streamlit.app/get_token" target="_self">{key}</a>'
             )
 
         
     # Add the "Update" and "View" buttons (invisible)
         elif value=="update":
             navbar_items+=(
-            f'<a style="display: none;" href="http://localhost:8000/update" target="_self">Update</a>'
+            f'<a style="display: none;" href="https://bgdaxjwbynxkobvuwmmt67.streamlit.app/update" target="_self">Update</a>'
             )
         elif value=='View':
             navbar_items += (
-                f'<a style="display: none;" href="http://localhost:8000/view" target="_self">View</a>')
+                f'<a style="display: none;" href="https://bgdaxjwbynxkobvuwmmt67.streamlit.app/view" target="_self">View</a>')
         elif value=='Audit':
             navbar_items += (
-                f'<a style="display: none;" href="http://localhost:8000/Audit" target="_self">Audit</a>')
+                f'<a style="display: none;" href="https://bgdaxjwbynxkobvuwmmt67.streamlit.app/Audit" target="_self">Audit</a>')
         else:
 
             navbar_items += (
 
-                f'<a style="font-family: \'Trebuchet MS\', sans-serif; float: left; display: block; color: #000000 !important; text-align: center; text-decoration: none !important; border-bottom: 2px solid transparent; padding-left:40px; font-size: 34px;" href="http://localhost:8000/" target="_self">{key}</a>'
+                f'<a style="font-family: \'Trebuchet MS\', sans-serif; float: left; display: block; color: #000000 !important; text-align: center; text-decoration: none !important; border-bottom: 2px solid transparent; padding-left:40px; font-size: 34px;" href="https://bgdaxjwbynxkobvuwmmt67.streamlit.app/" target="_self">{key}</a>'
 
             )
     #adds a dropdown icon to the right corner of page but currently not being used
@@ -127,7 +127,7 @@ def navbar_component():
                 
             </nav>
             <nav class="container" style="font-family: 'Trebuchet MS', sans-serif; position: fixed; width: 10%; color: #000000; z-index: 9999; right: 0rem; top: 2.5rem; height: 80px;">
-                <a style="font-family: \'Trebuchet MS\', sans-serif; float: left; display: block; color: #00000 !important;   text-align: center; background-color: rgb(255,255,255); padding: 5px 10px; text-decoration: none; font-size: 14px;" href="http://localhost:8000/auth/sign_out" target="_self">Log Out</a>
+                <a style="font-family: \'Trebuchet MS\', sans-serif; float: left; display: block; color: #00000 !important;   text-align: center; background-color: rgb(255,255,255); padding: 5px 10px; text-decoration: none; font-size: 14px;" href="https://bgdaxjwbynxkobvuwmmt67.streamlit.app/auth/sign_out" target="_self">Log Out</a>
             </nav>
             '''
     st.markdown(component, unsafe_allow_html=True)
@@ -197,41 +197,41 @@ def sidebar_component():
                 f'<div class="dropdown" style="position: relative; display: inline-block;">'
                 f'    <a style="font-family: Sans Serif; float: left; display: block; color: #f2f2f2 !important; text-align: center; padding: 10px 40px; text-decoration: none !important; border-bottom: 2px solid transparent; font-size: 24px; cursor: pointer;" target="_self">{key}</a>'
                 f'    <div class="dropdown-content" >'
-                f'        <a href="http://localhost:8000/get_dropdowns" ">Customer Project</a>'
-                f'        <a href="http://localhost:8000/get_usecases" >Customer Usecase</a>'
+                f'        <a href="https://bgdaxjwbynxkobvuwmmt67.streamlit.app/get_dropdowns" ">Customer Project</a>'
+                f'        <a href="https://bgdaxjwbynxkobvuwmmt67.streamlit.app/get_usecases" >Customer Usecase</a>'
                     
                 f'    </div>'
                 f'</div>'
             )
         elif value == "Search":
             navbar_items += (
-                f'<a style="font-family: Sans Serif; float: left; display: block; color: #0w2450 !important; text-align: center; padding: 10px 40px; text-decoration: none !important; border-bottom: 2px solid transparent; font-size: 24px;" href="http://localhost:8000/get_token" target="_self">{key}</a>'
+                f'<a style="font-family: Sans Serif; float: left; display: block; color: #0w2450 !important; text-align: center; padding: 10px 40px; text-decoration: none !important; border-bottom: 2px solid transparent; font-size: 24px;" href="https://bgdaxjwbynxkobvuwmmt67.streamlit.app/get_token" target="_self">{key}</a>'
             )
 
         
     # Add the "Update" and "View" buttons (invisible)
         elif value=="update":
             navbar_items+=(
-            f'<a style="display: none;" href="http://localhost:8000/update" target="_self">Update</a>'
+            f'<a style="display: none;" href="https://bgdaxjwbynxkobvuwmmt67.streamlit.app/update" target="_self">Update</a>'
             )
         elif value=='View':
             navbar_items += (
-                f'<a style="display: none;" href="http://localhost:8000/view" target="_self">View</a>')
+                f'<a style="display: none;" href="https://bgdaxjwbynxkobvuwmmt67.streamlit.app/view" target="_self">View</a>')
         elif value=='Audit':
             navbar_items += (
-                f'<a style="display: none;" href="http://localhost:8000/Audit" target="_self">Audit</a>')
+                f'<a style="display: none;" href="https://bgdaxjwbynxkobvuwmmt67.streamlit.app/Audit" target="_self">Audit</a>')
         else:
 
             navbar_items += (
 
-                f'<a style="font-family: \'Trebuchet MS\', sans-serif; float: left; display: block; color: #000000 !important; text-align: center; text-decoration: none !important; border-bottom: 2px solid transparent; padding-left:40px; font-size: 34px;" href="http://localhost:8000/" target="_self">{key}</a>'
+                f'<a style="font-family: \'Trebuchet MS\', sans-serif; float: left; display: block; color: #000000 !important; text-align: center; text-decoration: none !important; border-bottom: 2px solid transparent; padding-left:40px; font-size: 34px;" href="https://bgdaxjwbynxkobvuwmmt67.streamlit.app/" target="_self">{key}</a>'
 
             )
     # Create a dictionary to map component labels to URLs
     components = {
-        "Home": "http://localhost:8000/",
-        "Add Customer Project": "http://localhost:8000/get_dropdowns",
-        "Search Project": "http://localhost:8000/get_token",
+        "Home": "https://bgdaxjwbynxkobvuwmmt67.streamlit.app/",
+        "Add Customer Project": "https://bgdaxjwbynxkobvuwmmt67.streamlit.app/get_dropdowns",
+        "Search Project": "https://bgdaxjwbynxkobvuwmmt67.streamlit.app/get_token",
         # "Add Customer Usecases": "http://localhost:8000/get_usecases",
         "Search CSAT": ""
     }
@@ -244,7 +244,7 @@ def sidebar_component():
                 
             </nav>
             <nav class="container" style="font-family: 'Trebuchet MS', sans-serif; position: fixed; width: 10%; color: #000000; z-index: 9999; right: 0rem; top: 2.5rem; height: 80px;">
-                <a style="font-family: \'Trebuchet MS\', sans-serif; float: left; display: block; color: #00000 !important;   text-align: center; background-color: rgb(255,255,255); padding: 5px 10px; text-decoration: none; font-size: 14px;" href="http://localhost:8000/auth/sign_out" target="_self">Log Out</a>
+                <a style="font-family: \'Trebuchet MS\', sans-serif; float: left; display: block; color: #00000 !important;   text-align: center; background-color: rgb(255,255,255); padding: 5px 10px; text-decoration: none; font-size: 14px;" href="https://bgdaxjwbynxkobvuwmmt67.streamlit.app/auth/sign_out" target="_self">Log Out</a>
             </nav>
             '''
     st.markdown(component, unsafe_allow_html=True)

@@ -135,7 +135,7 @@ def load_view():
             #sending the data and the token through the request to the add.html page that will send it to the backend
             nav_script = """
                 <meta http-equiv="refresh" content="0; url='%s'">
-            """ % ('http://localhost:8000/auth/add?payload='+str(data)+'&token='+token)
+            """ % ('https://bgdaxjwbynxkobvuwmmt67.streamlit.app/auth/add?payload='+str(data)+'&token='+token)
             st.write(nav_script, unsafe_allow_html=True)
 
     

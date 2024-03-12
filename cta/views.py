@@ -154,7 +154,7 @@ def get_entities(request):
         results['value'] =[{'displayName': 'call-graph-error', 'id': 'call-graph-error'}]
     print(results['value'][0])
     query_params = '&'.join([f'name={item["name"]}' for item in results['value']])
-    url = f'http://localhost:8501/Show?{query_params}'
+    url = f'https://bgdaxjwbynxkobvuwmmt67.streamlit.app/Show?{query_params}'
     print(url)
     return render(request, 'auth/entities.html', {'url': url})
 
@@ -357,7 +357,7 @@ def get_bulk(request):
 
     created_account  = account.create(data)
 
-    url = f'http://localhost:8501/Search?cr7c7_projects'
+    url = f'https://bgdaxjwbynxkobvuwmmt67.streamlit.app/Search?cr7c7_projects'
 
     return render(request, 'auth/search_2.html', {'token': ms_identity_web.id_data._access_token})
 #@ms_identity_web.login_required
@@ -889,7 +889,7 @@ def update_project(request):
                 new_key = columns1[index]
                 project1[new_key] = value
     print(project1)
-    url = f'http://localhost:8501/?nav=Search&cr7c7_projects'
+    url = f'https://bgdaxjwbynxkobvuwmmt67.streamlit.app/?nav=Search&cr7c7_projects'
     http_request = HttpRequest()
     http_request.method = 'GET'  # Set the request method, e.g., 'GET', 'POST', etc.
     http_request.GET = {'data': str(data1), 'dr_number': dr_number, 'token':ms_identity_web.id_data._access_token}
@@ -913,7 +913,7 @@ def get_audit(request):
     filter_exp = "_objectid_value eq '"+account_id+"'"
     changes = account.audit(filter_expression=filter_exp)["value"]
     print(changes)
-    url = f'http://localhost:8501/?nav=Audit&payload='+json.dumps(changes)
+    url = f'https://bgdaxjwbynxkobvuwmmt67.streamlit.app/?nav=Audit&payload='+json.dumps(changes)
     return render(request, 'auth/audit.html', {'context':changes})
 
 

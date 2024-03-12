@@ -40,7 +40,7 @@ MIDDLEWARE = [
 ]
 
 '''CORS_ALLOWED_ORIGINS = [
-    #'http://localhost:8000',
+    #'https://bgdaxjwbynxkobvuwmmt67.streamlit.app',
 ]'''
 CORS_ORIGIN_ALLOW_ALL=True
 CORS_ALLOW_CREDENTIALS = True

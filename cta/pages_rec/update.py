@@ -23,7 +23,7 @@ def update():
             "Prefer": "return=representation, odata.include-annotations=OData.Community.Display.V1.FormattedValue"
         }
     #fetches the dropdowns of the different fields from the backend(views.py)
-    resp = requests.get("http://localhost:8000/get_dropdowns_update", params = {"token":token}, headers=headers)
+    resp = requests.get("https://bgdaxjwbynxkobvuwmmt67.streamlit.app/get_dropdowns_update", params = {"token":token}, headers=headers)
     if resp.status_code == 200:
         data = resp.json()
         print(data)
@@ -136,5 +136,5 @@ def update():
             st.write(data)
             nav_script = """
                 <meta http-equiv="refresh" content="0; url='%s'">
-            """ % ('http://localhost:8000/auth/update?payload='+str(data)+'&token='+token)
+            """ % ('https://bgdaxjwbynxkobvuwmmt67.streamlit.app/auth/update?payload='+str(data)+'&token='+token)
             st.write(nav_script, unsafe_allow_html=True) #sends the updated record fields to the backend

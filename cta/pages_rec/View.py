@@ -9,7 +9,7 @@ def updateJourney(dataframe, token, dr_number): #takes us to the update_journey.
     dataframe = dataframe.to_dict('records')
     print(token)
     #sends the token and the selected record to be updated in the payload so that it can be picked up by the update function
-    nav_script = """<meta http-equiv="refresh" content="0; url='%s'">""" % ('http://localhost:8501/?nav=Update_journey&payload='+str(dataframe)+'&token='+token+'&dr_number='+dr_number)
+    nav_script = """<meta http-equiv="refresh" content="0; url='%s'">""" % ('https://bgdaxjwbynxkobvuwmmt67.streamlit.app/?nav=Update_journey&payload='+str(dataframe)+'&token='+token+'&dr_number='+dr_number)
     st.write(nav_script, unsafe_allow_html=True)
 def viewAndUpdateJourney(): #function gets executed when the view project and update journey button is clicked
     utl.sidebar_component() 
@@ -53,7 +53,7 @@ def viewAndUpdateJourney(): #function gets executed when the view project and up
             if addjour:
                 nav_script = """
                     <meta http-equiv="refresh" content="0; url='%s'">
-                """ % ('http://localhost:8000/get_dropdowns_journey?dr_number='+str(dr_number))
+                """ % ('https://bgdaxjwbynxkobvuwmmt67.streamlit.app/get_dropdowns_journey?dr_number='+str(dr_number))
                 st.write(nav_script, unsafe_allow_html=True)
             if(query_params=='[]'):
                 st.write("No journey to display")

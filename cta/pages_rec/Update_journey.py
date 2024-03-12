@@ -25,7 +25,7 @@ def update():
             "Access-Control-Allow-Origin":"*",
             "Prefer": "return=representation, odata.include-annotations=OData.Community.Display.V1.FormattedValue"
         }
-    resp = requests.get("http://localhost:8000/get_dropdowns_journey_update", params = {"token":token}, headers=headers)
+    resp = requests.get("https://bgdaxjwbynxkobvuwmmt67.streamlit.app/get_dropdowns_journey_update", params = {"token":token}, headers=headers)
     #get all the dropdowns to update the record directly from backend 
     if resp.status_code == 200:
         data = resp.json()
@@ -67,5 +67,5 @@ def update():
             st.write(data)
             nav_script = """
                 <meta http-equiv="refresh" content="0; url='%s'">
-            """ % ('http://localhost:8000/auth/update_journey?payload='+str(data)+'&id='+journey_id)
+            """ % ('https://bgdaxjwbynxkobvuwmmt67.streamlit.app/auth/update_journey?payload='+str(data)+'&id='+journey_id)
             st.write(nav_script, unsafe_allow_html=True) #send the update fields to the backend for updating through the update_journey.html

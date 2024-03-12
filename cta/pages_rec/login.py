@@ -32,7 +32,7 @@ def load_view():
         if x:
             nav_script = """
                 <meta http-equiv="refresh" content="0; url='%s'">
-                """ % ('http://localhost:8000/auth/sign_in')
+                """ % ('https://bgdaxjwbynxkobvuwmmt67.streamlit.app/auth/sign_in')
             col2.write(nav_script, unsafe_allow_html=True)
 
     

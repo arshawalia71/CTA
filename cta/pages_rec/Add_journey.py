@@ -71,7 +71,7 @@ def load_view():
             #views.py has a function that will put the data into the database
             nav_script = """
                 <meta http-equiv="refresh" content="0; url='%s'">
-            """ % ('http://localhost:8000/auth/add_journey?payload='+str(data))
+            """ % ('https://bgdaxjwbynxkobvuwmmt67.streamlit.app/auth/add_journey?payload='+str(data))
             #navscript will be executed in the below st.write, the unsafe_allow_html must be true for it to be executable
             st.write(nav_script, unsafe_allow_html=True)
             #st.write("The record has been added successfully")
