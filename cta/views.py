@@ -40,7 +40,7 @@ ms_identity_web = settings.MS_IDENTITY_WEB
 @ms_identity_web.login_required
 def name_details(request):
     print(request)
-    username = request.identity_context_data.username
+    username = "Fake Username"
     return username
 
 def index(request):
